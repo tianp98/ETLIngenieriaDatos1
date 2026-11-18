@@ -1,0 +1,156 @@
+[{
+  "_id": {
+    "$oid": "640d0a975f254a7fe2ff5233"
+  },
+  "PID": {
+    "$numberLong": "528164060"
+  },
+  "Pool Area": {
+    "$numberLong": "144"
+  },
+  "Pool QC": "Ex"
+},
+{
+  "_id": {
+    "$oid": "640d0a9b5f254a7fe2ff5576"
+  },
+  "PID": {
+    "$numberLong": "908154235"
+  },
+  "Pool Area": {
+    "$numberLong": "480"
+  },
+  "Pool QC": "Gd"
+},
+{
+  "_id": {
+    "$oid": "640d0a9c5f254a7fe2ff55ba"
+  },
+  "PID": {
+    "$numberLong": "914475020"
+  },
+  "Pool Area": {
+    "$numberLong": "576"
+  },
+  "Pool QC": "Gd"
+},
+{
+  "_id": {
+    "$oid": "640d0a9e5f254a7fe2ff57a8"
+  },
+  "PID": {
+    "$numberLong": "528320050"
+  },
+  "Pool Area": {
+    "$numberLong": "555"
+  },
+  "Pool QC": "Ex"
+},
+{
+  "_id": {
+    "$oid": "640d0aa05f254a7fe2ff58c0"
+  },
+  "PID": {
+    "$numberLong": "535353050"
+  },
+  "Pool Area": {
+    "$numberLong": "368"
+  },
+  "Pool QC": "TA"
+},
+{
+  "_id": {
+    "$oid": "640d0aa15f254a7fe2ff59b9"
+  },
+  "PID": {
+    "$numberLong": "906200230"
+  },
+  "Pool Area": {
+    "$numberLong": "444"
+  },
+  "Pool QC": "TA"
+},
+{
+  "_id": {
+    "$oid": "640d0aa35f254a7fe2ff5b72"
+  },
+  "PID": {
+    "$numberLong": "909475230"
+  },
+  "Pool Area": {
+    "$numberLong": "228"
+  },
+  "Pool QC": "Ex"
+},
+{
+  "_id": {
+    "$oid": "640d0aa35f254a7fe2ff5ba2"
+  },
+  "PID": {
+    "$numberLong": "923202220"
+  },
+  "Pool Area": {
+    "$numberLong": "561"
+  },
+  "Pool QC": "TA"
+},
+{
+  "_id": {
+    "$oid": "640d0aa55f254a7fe2ff5c4e"
+  },
+  "PID": {
+    "$numberLong": "527356020"
+  },
+  "Pool Area": {
+    "$numberLong": "519"
+  },
+  "Pool QC": "Fa"
+},
+{
+  "_id": {
+    "$oid": "640d0aa55f254a7fe2ff5c55"
+  },
+  "PID": {
+    "$numberLong": "527377030"
+  },
+  "Pool Area": {
+    "$numberLong": "648"
+  },
+  "Pool QC": "Fa"
+},
+{
+  "_id": {
+    "$oid": "640d0aa65f254a7fe2ff5d46"
+  },
+  "PID": {
+    "$numberLong": "532476050"
+  },
+  "Pool Area": {
+    "$numberLong": "800"
+  },
+  "Pool QC": "Gd"
+},
+{
+  "_id": {
+    "$oid": "640d0aa75f254a7fe2ff5df2"
+  },
+  "PID": {
+    "$numberLong": "535150300"
+  },
+  "Pool Area": {
+    "$numberLong": "512"
+  },
+  "Pool QC": "Ex"
+},
+{
+  "_id": {
+    "$oid": "640d0aa95f254a7fe2ff5f5f"
+  },
+  "PID": {
+    "$numberLong": "905426150"
+  },
+  "Pool Area": {
+    "$numberLong": "738"
+  },
+  "Pool QC": "Gd"
+}]

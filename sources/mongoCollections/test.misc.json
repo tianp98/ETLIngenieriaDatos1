@@ -1,0 +1,1272 @@
+[{
+  "_id": {
+    "$oid": "640f86e65f254a7fe2ff8f3e"
+  },
+  "PID": {
+    "$numberLong": "526351010"
+  },
+  "Misc Feature": "Gar2",
+  "Misc Val": {
+    "$numberLong": "12500"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86e65f254a7fe2ff8f47"
+  },
+  "PID": {
+    "$numberLong": "527165230"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "500"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86e65f254a7fe2ff8f53"
+  },
+  "PID": {
+    "$numberLong": "527402200"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "700"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86e65f254a7fe2ff8f88"
+  },
+  "PID": {
+    "$numberLong": "531451280"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "400"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86e65f254a7fe2ff8f90"
+  },
+  "PID": {
+    "$numberLong": "532354090"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "400"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86e75f254a7fe2ff8fae"
+  },
+  "PID": {
+    "$numberLong": "534152100"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "500"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86e75f254a7fe2ff8fb3"
+  },
+  "PID": {
+    "$numberLong": "534276360"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "400"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86e75f254a7fe2ff8fbe"
+  },
+  "PID": {
+    "$numberLong": "534451150"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "450"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86e75f254a7fe2ff8fc2"
+  },
+  "PID": {
+    "$numberLong": "535101020"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "1500"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86e75f254a7fe2ff8fc7"
+  },
+  "PID": {
+    "$numberLong": "535152050"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "300"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86e75f254a7fe2ff8fda"
+  },
+  "PID": {
+    "$numberLong": "535377090"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "600"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86e75f254a7fe2ff8ff4"
+  },
+  "PID": {
+    "$numberLong": "902327040"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "1200"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86e85f254a7fe2ff900a"
+  },
+  "PID": {
+    "$numberLong": "903454060"
+  },
+  "Misc Feature": "Othr",
+  "Misc Val": {
+    "$numberLong": "3500"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86e85f254a7fe2ff9026"
+  },
+  "PID": {
+    "$numberLong": "905378040"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "450"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86e85f254a7fe2ff9027"
+  },
+  "PID": {
+    "$numberLong": "905426060"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "400"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86e85f254a7fe2ff9040"
+  },
+  "PID": {
+    "$numberLong": "907200290"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "450"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86e85f254a7fe2ff9044"
+  },
+  "PID": {
+    "$numberLong": "907252120"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "2000"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86e85f254a7fe2ff905e"
+  },
+  "PID": {
+    "$numberLong": "909177100"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "500"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86e85f254a7fe2ff9063"
+  },
+  "PID": {
+    "$numberLong": "909427230"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "2500"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86e95f254a7fe2ff906e"
+  },
+  "PID": {
+    "$numberLong": "911204090"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "54"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86e95f254a7fe2ff9072"
+  },
+  "PID": {
+    "$numberLong": "914475090"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "80"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86e95f254a7fe2ff908c"
+  },
+  "PID": {
+    "$numberLong": "923276250"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "600"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86e95f254a7fe2ff9096"
+  },
+  "PID": {
+    "$numberLong": "527107130"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "490"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86e95f254a7fe2ff9098"
+  },
+  "PID": {
+    "$numberLong": "527110020"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "700"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86e95f254a7fe2ff90a1"
+  },
+  "PID": {
+    "$numberLong": "527163070"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "480"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86e95f254a7fe2ff90ca"
+  },
+  "PID": {
+    "$numberLong": "527405160"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "500"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86ea5f254a7fe2ff90df"
+  },
+  "PID": {
+    "$numberLong": "527455280"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "1200"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86eb5f254a7fe2ff916c"
+  },
+  "PID": {
+    "$numberLong": "532377130"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "400"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86eb5f254a7fe2ff9182"
+  },
+  "PID": {
+    "$numberLong": "534128010"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "350"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86eb5f254a7fe2ff9187"
+  },
+  "PID": {
+    "$numberLong": "534129370"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "650"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86ec5f254a7fe2ff9195"
+  },
+  "PID": {
+    "$numberLong": "534276040"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "450"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86ec5f254a7fe2ff91c2"
+  },
+  "PID": {
+    "$numberLong": "535351050"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "2000"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86ec5f254a7fe2ff91da"
+  },
+  "PID": {
+    "$numberLong": "535403190"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "450"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86ec5f254a7fe2ff91df"
+  },
+  "PID": {
+    "$numberLong": "535450070"
+  },
+  "Misc Feature": "Othr",
+  "Misc Val": {
+    "$numberLong": "0"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86ed5f254a7fe2ff922b"
+  },
+  "PID": {
+    "$numberLong": "903429110"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "400"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86ee5f254a7fe2ff925c"
+  },
+  "PID": {
+    "$numberLong": "906201050"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "600"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86ee5f254a7fe2ff92bb"
+  },
+  "PID": {
+    "$numberLong": "908225290"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "900"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86ef5f254a7fe2ff92c2"
+  },
+  "PID": {
+    "$numberLong": "909101010"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "800"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86ef5f254a7fe2ff92e4"
+  },
+  "PID": {
+    "$numberLong": "909452050"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "1500"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86ef5f254a7fe2ff92ff"
+  },
+  "PID": {
+    "$numberLong": "916403200"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "2500"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86ef5f254a7fe2ff930a"
+  },
+  "PID": {
+    "$numberLong": "923225490"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "600"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86ef5f254a7fe2ff9311"
+  },
+  "PID": {
+    "$numberLong": "923252075"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "700"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86ef5f254a7fe2ff9315"
+  },
+  "PID": {
+    "$numberLong": "923400025"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "700"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f05f254a7fe2ff932a"
+  },
+  "PID": {
+    "$numberLong": "527164120"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "500"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f05f254a7fe2ff9331"
+  },
+  "PID": {
+    "$numberLong": "527226020"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "750"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f15f254a7fe2ff93b2"
+  },
+  "PID": {
+    "$numberLong": "531384030"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "2000"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f15f254a7fe2ff93b9"
+  },
+  "PID": {
+    "$numberLong": "532351050"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "400"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f15f254a7fe2ff93bd"
+  },
+  "PID": {
+    "$numberLong": "532377020"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "650"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f15f254a7fe2ff93e1"
+  },
+  "PID": {
+    "$numberLong": "534129060"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "450"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f25f254a7fe2ff9413"
+  },
+  "PID": {
+    "$numberLong": "535153150"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "1400"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f25f254a7fe2ff941c"
+  },
+  "PID": {
+    "$numberLong": "535303030"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "1500"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f25f254a7fe2ff9429"
+  },
+  "PID": {
+    "$numberLong": "535403010"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "450"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f25f254a7fe2ff942a"
+  },
+  "PID": {
+    "$numberLong": "535425060"
+  },
+  "Misc Feature": "Othr",
+  "Misc Val": {
+    "$numberLong": "6500"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f25f254a7fe2ff9444"
+  },
+  "PID": {
+    "$numberLong": "902105020"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "1150"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f35f254a7fe2ff946d"
+  },
+  "PID": {
+    "$numberLong": "903204095"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "600"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f35f254a7fe2ff9471"
+  },
+  "PID": {
+    "$numberLong": "903225160"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "400"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f35f254a7fe2ff9488"
+  },
+  "PID": {
+    "$numberLong": "903426160"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "1000"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f35f254a7fe2ff94a0"
+  },
+  "PID": {
+    "$numberLong": "905104110"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "600"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f45f254a7fe2ff94d2"
+  },
+  "PID": {
+    "$numberLong": "906476030"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "400"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f45f254a7fe2ff94de"
+  },
+  "PID": {
+    "$numberLong": "907196040"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "4500"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f55f254a7fe2ff951f"
+  },
+  "PID": {
+    "$numberLong": "908250090"
+  },
+  "Misc Feature": "Gar2",
+  "Misc Val": {
+    "$numberLong": "3000"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f55f254a7fe2ff9532"
+  },
+  "PID": {
+    "$numberLong": "909252220"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "400"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f55f254a7fe2ff9551"
+  },
+  "PID": {
+    "$numberLong": "911226010"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "560"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f55f254a7fe2ff955e"
+  },
+  "PID": {
+    "$numberLong": "916125425"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "700"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f55f254a7fe2ff957a"
+  },
+  "PID": {
+    "$numberLong": "923227030"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "500"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f65f254a7fe2ff9583"
+  },
+  "PID": {
+    "$numberLong": "923400040"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "1300"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f65f254a7fe2ff9585"
+  },
+  "PID": {
+    "$numberLong": "924100020"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "400"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f65f254a7fe2ff95af"
+  },
+  "PID": {
+    "$numberLong": "527328020"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "500"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f75f254a7fe2ff9601"
+  },
+  "PID": {
+    "$numberLong": "528221050"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "2000"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f85f254a7fe2ff965a"
+  },
+  "PID": {
+    "$numberLong": "532376040"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "400"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f85f254a7fe2ff9681"
+  },
+  "PID": {
+    "$numberLong": "533352075"
+  },
+  "Misc Feature": "Gar2",
+  "Misc Val": {
+    "$numberLong": "8300"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f85f254a7fe2ff968b"
+  },
+  "PID": {
+    "$numberLong": "534176140"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "400"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f85f254a7fe2ff9694"
+  },
+  "PID": {
+    "$numberLong": "534252110"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "600"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f85f254a7fe2ff9695"
+  },
+  "PID": {
+    "$numberLong": "534275170"
+  },
+  "Misc Feature": "Gar2",
+  "Misc Val": {
+    "$numberLong": "15500"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f85f254a7fe2ff9698"
+  },
+  "PID": {
+    "$numberLong": "534276160"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "480"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f85f254a7fe2ff969a"
+  },
+  "PID": {
+    "$numberLong": "534276290"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "1200"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f95f254a7fe2ff96ab"
+  },
+  "PID": {
+    "$numberLong": "534451020"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "2000"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f95f254a7fe2ff96bc"
+  },
+  "PID": {
+    "$numberLong": "535154080"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "500"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f95f254a7fe2ff96d1"
+  },
+  "PID": {
+    "$numberLong": "535353130"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "400"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f95f254a7fe2ff96e0"
+  },
+  "PID": {
+    "$numberLong": "535450190"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "2000"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f95f254a7fe2ff96e7"
+  },
+  "PID": {
+    "$numberLong": "535453080"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "0"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86f95f254a7fe2ff96f7"
+  },
+  "PID": {
+    "$numberLong": "902125120"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "450"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86fa5f254a7fe2ff974d"
+  },
+  "PID": {
+    "$numberLong": "905225020"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "500"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86fb5f254a7fe2ff977f"
+  },
+  "PID": {
+    "$numberLong": "906426060"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "500"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86fb5f254a7fe2ff97b3"
+  },
+  "PID": {
+    "$numberLong": "908102100"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "400"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86fb5f254a7fe2ff97b4"
+  },
+  "PID": {
+    "$numberLong": "908102160"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "450"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86fb5f254a7fe2ff97c0"
+  },
+  "PID": {
+    "$numberLong": "908154195"
+  },
+  "Misc Feature": "Elev",
+  "Misc Val": {
+    "$numberLong": "17000"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86fb5f254a7fe2ff97cf"
+  },
+  "PID": {
+    "$numberLong": "909176170"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "1512"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86fd5f254a7fe2ff9862"
+  },
+  "PID": {
+    "$numberLong": "527301010"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "400"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86fd5f254a7fe2ff986a"
+  },
+  "PID": {
+    "$numberLong": "527356020"
+  },
+  "Misc Feature": "TenC",
+  "Misc Val": {
+    "$numberLong": "2000"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86fd5f254a7fe2ff9874"
+  },
+  "PID": {
+    "$numberLong": "527402380"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "0"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86fe5f254a7fe2ff98eb"
+  },
+  "PID": {
+    "$numberLong": "531451290"
+  },
+  "Misc Feature": "Othr",
+  "Misc Val": {
+    "$numberLong": "3000"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86ff5f254a7fe2ff9921"
+  },
+  "PID": {
+    "$numberLong": "534201250"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "455"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86ff5f254a7fe2ff992c"
+  },
+  "PID": {
+    "$numberLong": "534400120"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "460"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86ff5f254a7fe2ff992d"
+  },
+  "PID": {
+    "$numberLong": "534403280"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "700"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86ff5f254a7fe2ff9958"
+  },
+  "PID": {
+    "$numberLong": "535325350"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "650"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f86ff5f254a7fe2ff995b"
+  },
+  "PID": {
+    "$numberLong": "535327210"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "400"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f87005f254a7fe2ff9969"
+  },
+  "PID": {
+    "$numberLong": "535382130"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "500"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f87005f254a7fe2ff99a8"
+  },
+  "PID": {
+    "$numberLong": "902406030"
+  },
+  "Misc Feature": "Gar2",
+  "Misc Val": {
+    "$numberLong": "4500"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f87005f254a7fe2ff99af"
+  },
+  "PID": {
+    "$numberLong": "903231070"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "400"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f87005f254a7fe2ff99b2"
+  },
+  "PID": {
+    "$numberLong": "903231240"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "620"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f87015f254a7fe2ff99c8"
+  },
+  "PID": {
+    "$numberLong": "904100170"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "600"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f87015f254a7fe2ff99ce"
+  },
+  "PID": {
+    "$numberLong": "905101330"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "500"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f87015f254a7fe2ff99d2"
+  },
+  "PID": {
+    "$numberLong": "905103180"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "500"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f87025f254a7fe2ff9a3c"
+  },
+  "PID": {
+    "$numberLong": "908102020"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "420"
+  }
+},
+{
+  "_id": {
+    "$oid": "640f87035f254a7fe2ff9aab"
+  },
+  "PID": {
+    "$numberLong": "923400125"
+  },
+  "Misc Feature": "Shed",
+  "Misc Val": {
+    "$numberLong": "700"
+  }
+}]
