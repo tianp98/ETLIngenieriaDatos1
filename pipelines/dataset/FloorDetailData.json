@@ -1,0 +1,25 @@
+{
+	"name": "FloorDetailData",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage_conn",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "FloorDetailData.csv",
+				"folderPath": "Neon",
+				"container": "sources"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

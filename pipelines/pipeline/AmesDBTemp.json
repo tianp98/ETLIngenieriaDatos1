@@ -1,0 +1,419 @@
+{
+	"name": "AmesDBTemp",
+	"properties": {
+		"activities": [
+			{
+				"name": "AMESDBTEMP",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzurePostgreSqlSource",
+						"partitionOption": "None",
+						"queryTimeout": "02:00:00"
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Exter Cond",
+									"type": "Int64",
+									"physicalType": "bigint"
+								},
+								"sink": {
+									"name": "ExterCond",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Exter Qual",
+									"type": "Int64",
+									"physicalType": "bigint"
+								},
+								"sink": {
+									"name": "ExterQual",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Heating QC",
+									"type": "Int64",
+									"physicalType": "bigint"
+								},
+								"sink": {
+									"name": "Heating QC",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Kitchen Qual",
+									"type": "Int64",
+									"physicalType": "bigint"
+								},
+								"sink": {
+									"name": "KitchenQual",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MS Zoning",
+									"type": "Int64",
+									"physicalType": "bigint"
+								},
+								"sink": {
+									"name": "MSZoning",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "pid",
+									"type": "Int64",
+									"physicalType": "bigint"
+								},
+								"sink": {
+									"name": "Pid",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Roof Style",
+									"type": "String",
+									"physicalType": "character varying"
+								},
+								"sink": {
+									"name": "RoofStyle",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Roof Matl",
+									"type": "String",
+									"physicalType": "character varying"
+								},
+								"sink": {
+									"name": "RoofMatl",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Exterior 1st",
+									"type": "String",
+									"physicalType": "character varying"
+								},
+								"sink": {
+									"name": "Exterior1st",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Exterior 2nd",
+									"type": "String",
+									"physicalType": "character varying"
+								},
+								"sink": {
+									"name": "Exterior2nd",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Mas Vnr Type",
+									"type": "String",
+									"physicalType": "character varying"
+								},
+								"sink": {
+									"name": "MasVnrType",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Mas Vnr Area",
+									"type": "Int64",
+									"physicalType": "bigint"
+								},
+								"sink": {
+									"name": "MasVnrArea",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "foundation",
+									"type": "String",
+									"physicalType": "character varying"
+								},
+								"sink": {
+									"name": "Foundation",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "heating",
+									"type": "String",
+									"physicalType": "character varying"
+								},
+								"sink": {
+									"name": "Heating",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Central Air",
+									"type": "Boolean",
+									"physicalType": "boolean"
+								},
+								"sink": {
+									"name": "Central Air",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "electrical",
+									"type": "String",
+									"physicalType": "character varying"
+								},
+								"sink": {
+									"name": "lectrical",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "1st Flr SF",
+									"type": "Int64",
+									"physicalType": "bigint"
+								},
+								"sink": {
+									"name": "1stFlrSF",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "2nd Flr SF",
+									"type": "Int64",
+									"physicalType": "bigint"
+								},
+								"sink": {
+									"name": "2ndFlrSF",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Low Qual Fin SF",
+									"type": "Int64",
+									"physicalType": "bigint"
+								},
+								"sink": {
+									"name": "LowQualFinSF",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Kitchen AbvGr",
+									"type": "Int64",
+									"physicalType": "bigint"
+								},
+								"sink": {
+									"name": "Kitchen AbvGr",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TotRms AbvGrd",
+									"type": "Int64",
+									"physicalType": "bigint"
+								},
+								"sink": {
+									"name": "TotRmsAbvGrd",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "functional",
+									"type": "String",
+									"physicalType": "character varying"
+								},
+								"sink": {
+									"name": "Functional",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "fireplaces",
+									"type": "Int64",
+									"physicalType": "bigint"
+								},
+								"sink": {
+									"name": "Fireplaces",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Fireplace Qu",
+									"type": "String",
+									"physicalType": "character varying"
+								},
+								"sink": {
+									"name": "FireplaceQu",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Paved Drive",
+									"type": "String",
+									"physicalType": "character varying"
+								},
+								"sink": {
+									"name": "PavedDrive",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Wood Deck SF",
+									"type": "Int64",
+									"physicalType": "bigint"
+								},
+								"sink": {
+									"name": "WoodDeckSF",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Open Porch SF",
+									"type": "Int64",
+									"physicalType": "bigint"
+								},
+								"sink": {
+									"name": "OpenPorchSF",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Enclosed Porch",
+									"type": "Int64",
+									"physicalType": "bigint"
+								},
+								"sink": {
+									"name": "EnclosedPorch",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "3Ssn Porch",
+									"type": "Int64",
+									"physicalType": "bigint"
+								},
+								"sink": {
+									"name": "3SsnPorch",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "fence",
+									"type": "String",
+									"physicalType": "character varying"
+								},
+								"sink": {
+									"name": "Fence",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Screen Porch",
+									"type": "Int64",
+									"physicalType": "bigint"
+								},
+								"sink": {
+									"name": "ScreenPorch",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MS SubClass",
+									"type": "Int64",
+									"physicalType": "bigint"
+								},
+								"sink": {
+									"name": "MSSubClass",
+									"physicalType": "String"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "AmesDBTempOrg",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AmesDBTempdata",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2026-11-20T03:44:42Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

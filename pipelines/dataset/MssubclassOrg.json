@@ -1,0 +1,30 @@
+{
+	"name": "MssubclassOrg",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "NeonConn",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzurePostgreSqlTable",
+		"schema": [
+			{
+				"name": "description",
+				"type": "character varying",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "code",
+				"type": "bigint",
+				"precision": 0,
+				"scale": 0
+			}
+		],
+		"typeProperties": {
+			"schema": "public",
+			"table": "mssubclass"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

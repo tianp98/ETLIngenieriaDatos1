@@ -1,0 +1,16 @@
+{
+	"name": "poolorg",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "MongoConn",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "MongoDbAtlasCollection",
+		"schema": [],
+		"typeProperties": {
+			"collection": "pool"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,130 @@
+{
+	"name": "GARAGE",
+	"properties": {
+		"activities": [
+			{
+				"name": "GARAGE",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "MongoDbAtlasSource",
+						"batchSize": 100
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['Order']['$numberLong']"
+								},
+								"sink": {
+									"name": "Order"
+								}
+							},
+							{
+								"source": {
+									"path": "$['PID']['$numberLong']"
+								},
+								"sink": {
+									"name": "PID"
+								}
+							},
+							{
+								"source": {
+									"path": "$['Garage Type']"
+								},
+								"sink": {
+									"name": "GarageType"
+								}
+							},
+							{
+								"source": {
+									"path": "$['Garage Yr Blt']['$numberLong']"
+								},
+								"sink": {
+									"name": "GarageYrBlt"
+								}
+							},
+							{
+								"source": {
+									"path": "$['Garage Finish']"
+								},
+								"sink": {
+									"name": "GarageFinish"
+								}
+							},
+							{
+								"source": {
+									"path": "$['Garage Cars']['$numberLong']"
+								},
+								"sink": {
+									"name": "GarageCars"
+								}
+							},
+							{
+								"source": {
+									"path": "$['Garage Area']['$numberLong']"
+								},
+								"sink": {
+									"name": "GarageArea"
+								}
+							},
+							{
+								"source": {
+									"path": "$['Garage Qual']"
+								},
+								"sink": {
+									"name": "GarageQual"
+								}
+							},
+							{
+								"source": {
+									"path": "$['Garage Cond']"
+								},
+								"sink": {
+									"name": "GarageCond"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "GarageOrg",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "GarageData",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2026-11-20T03:44:42Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

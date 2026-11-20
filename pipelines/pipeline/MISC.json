@@ -1,0 +1,82 @@
+{
+	"name": "MISC",
+	"properties": {
+		"activities": [
+			{
+				"name": "MISC",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "MongoDbAtlasSource",
+						"batchSize": 100
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['PID']['$numberLong']"
+								},
+								"sink": {
+									"name": "PID"
+								}
+							},
+							{
+								"source": {
+									"path": "$['Misc Feature']"
+								},
+								"sink": {
+									"name": "MiscFeature"
+								}
+							},
+							{
+								"source": {
+									"path": "$['Misc Val']['$numberLong']"
+								},
+								"sink": {
+									"name": "MiscVal"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "miscorg",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "miscData",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2026-11-20T03:44:43Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

@@ -1,0 +1,284 @@
+{
+	"name": "AMESPROPERTY",
+	"properties": {
+		"activities": [
+			{
+				"name": "AMESPROPERTY",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "PID",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "PID",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Lot Frontage",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "LotFrontage",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Lot Area",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "LotArea",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Street",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Street",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Alley",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Alley",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Lot Shape",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "LotShape",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Land Contour",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "LandContour",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Utilities",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Utilities",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Lot Config",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "LotConfig",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Land Slope",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "LandSlope",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Neighborhood",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Neighborhood",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Condition 1",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Condition1",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Condition 2",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Condition2",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Bldg Type",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "BldgType",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "House Style",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "HouseStyle",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Overall Qual",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "OverallQual",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Overall Cond",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "OverallCond",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Year Built",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "YearBuilt",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Year Remod/Add",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "YearRemod/Add",
+									"physicalType": "String"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "AmespropertyOrg",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AmespropertyData",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2026-11-20T03:44:43Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

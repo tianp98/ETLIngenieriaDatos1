@@ -1,0 +1,16 @@
+{
+	"name": "ETLinmo",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true,
+			"isExplicitlySet": false
+		}
+	},
+	"location": "germanywestcentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "79d302ed-2e71-481d-bf9e-4ffbda2f08ec",
+		"tenantId": "e994072b-523e-4bfe-86e2-442c5e10b244"
+	}
+}

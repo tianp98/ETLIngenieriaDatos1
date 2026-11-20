@@ -1,0 +1,25 @@
+{
+	"name": "miscData",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage_conn",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "miscdata.csv",
+				"folderPath": "mongo",
+				"container": "sources"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

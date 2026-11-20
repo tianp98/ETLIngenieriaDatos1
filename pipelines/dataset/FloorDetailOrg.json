@@ -1,0 +1,48 @@
+{
+	"name": "FloorDetailOrg",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "NeonConn",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzurePostgreSqlTable",
+		"schema": [
+			{
+				"name": "pid",
+				"type": "bigint",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "Floor",
+				"type": "bigint",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "bedrooms",
+				"type": "bigint",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "Full Bath",
+				"type": "bigint",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "Half Bath",
+				"type": "bigint",
+				"precision": 0,
+				"scale": 0
+			}
+		],
+		"typeProperties": {
+			"schema": "public",
+			"table": "floordetail"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
