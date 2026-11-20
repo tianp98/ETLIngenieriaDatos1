@@ -37,6 +37,9 @@
 				},
 				{
 					"name": "select1"
+				},
+				{
+					"name": "derivedColumn3"
 				}
 			],
 			"scriptLines": [
@@ -64,7 +67,7 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> AMESPROPERTY",
-				"select1 derive(each(match(type == 'string'), $$ = iif(isNull($$) || trim($$) == '', 'NA', $$)),",
+				"derivedColumn3 derive(each(match(type == 'string'), $$ = iif(isNull($$) || trim($$) == '', 'NA', $$)),",
 				"          each(match(type == 'integer' || type == 'long' || type == 'short'), $$ = iifNull($$, 0)),",
 				"          each(match(type == 'double' || type == 'float' || type == 'decimal'), $$ = iifNull($$, 0.0))) ~> derivedColumn1",
 				"AMESPROPERTY aggregate(groupBy(Neighborhood),",
@@ -98,6 +101,7 @@
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> select1",
+				"select1 derive({YearRemod/Add} = iif(isNull({YearRemod/Add}) || trim(toString({YearRemod/Add})) == '', toInteger({YearBuilt}), toInteger({YearRemod/Add}))) ~> derivedColumn3",
 				"derivedColumn1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     format: 'parquet',",
