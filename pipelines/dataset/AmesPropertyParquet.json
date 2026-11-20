@@ -1,0 +1,20 @@
+{
+	"name": "AmesPropertyParquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage_conn",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "preprocessed",
+				"container": "sources"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
