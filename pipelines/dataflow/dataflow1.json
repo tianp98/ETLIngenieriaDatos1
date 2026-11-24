@@ -15,7 +15,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "PRUEBA1",
+						"referenceName": "prueba1",
 						"type": "DatasetReference"
 					},
 					"name": "sink1"
@@ -105,7 +105,25 @@
 				"derivedColumn1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
-				"          {PID;Lot Frontage;Lot Area;Street;Alley;Lot Shape;Land Contour;Utilities;Lot Config;Land Slope;Neighborhood;Condition 1;Condition 2;Bldg Type;House Style;Overall Qual;Overall Cond;Year Built;Year Remod/Add} as string",
+				"          PID as string,",
+				"          LotFrontage as string,",
+				"          LotArea as string,",
+				"          Street as string,",
+				"          Alley as string,",
+				"          LotShape as string,",
+				"          LandContour as string,",
+				"          Utilities as string,",
+				"          LotConfig as string,",
+				"          LandSlope as string,",
+				"          Neighborhood as string,",
+				"          Condition1 as string,",
+				"          Condition2 as string,",
+				"          BldgType as string,",
+				"          HouseStyle as string,",
+				"          OverallQual as string,",
+				"          OverallCond as string,",
+				"          YearBuilt as string,",
+				"          {YearRemod/Add} as string",
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> sink1"
