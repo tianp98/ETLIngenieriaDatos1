@@ -1,0 +1,406 @@
+{
+	"name": "dataflow2_copy1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "neon1",
+						"type": "DatasetReference"
+					},
+					"name": "NEON"
+				},
+				{
+					"dataset": {
+						"referenceName": "MONGO1",
+						"type": "DatasetReference"
+					},
+					"name": "MONGO"
+				},
+				{
+					"dataset": {
+						"referenceName": "SalePropertyData",
+						"type": "DatasetReference"
+					},
+					"name": "SALE"
+				},
+				{
+					"dataset": {
+						"referenceName": "TypequalityData",
+						"type": "DatasetReference"
+					},
+					"name": "TYPEQ"
+				},
+				{
+					"dataset": {
+						"referenceName": "MszoningData",
+						"type": "DatasetReference"
+					},
+					"name": "MSZONING"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "finale",
+						"type": "DatasetReference"
+					},
+					"name": "finale"
+				}
+			],
+			"transformations": [
+				{
+					"name": "select1"
+				},
+				{
+					"name": "derivedColumn6"
+				},
+				{
+					"name": "lookup1"
+				},
+				{
+					"name": "derivedColumn8"
+				},
+				{
+					"name": "select2"
+				},
+				{
+					"name": "lookup2"
+				},
+				{
+					"name": "derivedColumn9"
+				},
+				{
+					"name": "select3"
+				},
+				{
+					"name": "lookup3"
+				},
+				{
+					"name": "derivedColumn10"
+				},
+				{
+					"name": "select4"
+				},
+				{
+					"name": "lookup4"
+				},
+				{
+					"name": "derivedColumn11"
+				},
+				{
+					"name": "select5"
+				},
+				{
+					"name": "lookup5"
+				},
+				{
+					"name": "derivedColumn12"
+				},
+				{
+					"name": "select6"
+				},
+				{
+					"name": "select7"
+				},
+				{
+					"name": "derivedColumn14"
+				},
+				{
+					"name": "join5"
+				},
+				{
+					"name": "join6"
+				},
+				{
+					"name": "join7"
+				}
+			],
+			"scriptLines": [
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> NEON",
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> MONGO",
+				"source(output(",
+				"          PID as string,",
+				"          SaleDate as string,",
+				"          SaleType as string,",
+				"          SaleCondition as string,",
+				"          salePrice as integer",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> SALE",
+				"source(output(",
+				"          Id as string,",
+				"          Code as string,",
+				"          Description as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> TYPEQ",
+				"source(output(",
+				"          Id as string,",
+				"          Description as string,",
+				"          MSZoning as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> MSZONING",
+				"join7 select(skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1",
+				"select1 derive(each(match(in(['GarageType','GarageFinish','GarageQual','GarageCond','BsmtQual','BsmtCond','BsmtExposure','BsmtFinType 1','BsmtFinType2','PoolQC','MiscFeature'],name)), $$ = iif(isNull($$) || trim(toString($$)) == '', 'NA', trim(toString($$)))),",
+				"          each(match(in(['GarageYrBlt','GarageCars','GarageArea','BsmtFinSF1','BsmtFinSF2','BsmtUnfSF','TotalBsmtSF','BsmtFullBath','BsmtHalfBath','PoolArea','MiscVal'],name)), $$ = iif(isNull($$) || trim(toString($$)) == '', '0', trim(toString($$)))),",
+				"          each(match(in(['RoofStyle','RoofMatl','Exterior1st','Exterior2nd','MasVnrType','Foundation','Heating','Central Air','lectrical','Functional','FireplaceQu','PavedDrive','Fence','ExterQual','ExterCond','Heating QC','KitchenQual','MSZoning','SaleType','SaleCondition'],name)), $$ = iif(isNull($$) || trim(toString($$)) == '', 'NA', trim(toString($$)))),",
+				"          each(match(in(['MSSubClass','MasVnrArea','1stFlrSF','2ndFlrSF','LowQualFinSF','GrLivArea','Kitchen AbvGr','TotRmsAbvGrd','Fireplaces','WoodDeckSF','OpenPorchSF','EnclosedPorch','3SsnPorch','ScreenPorch','Bedrooms','FullBath','HalfBath','MoSold','YrSold','SalePrice'],name)), $$ = iif(isNull($$) || trim(toString($$)) == '', '0', trim(toString($$))))) ~> derivedColumn6",
+				"TYPEQ lookup(ExterQual == Id,",
+				"     multiple: false,",
+				"     pickup: 'any',",
+				"     broadcast: 'auto')~> lookup1",
+				"lookup1 derive(ExterQual_txt = toString(Code)) ~> derivedColumn8",
+				"derivedColumn8 select(mapColumn(",
+				"          ExterCond,",
+				"          HeatingQC = {Heating QC},",
+				"          KitchenQual,",
+				"          MSZoning,",
+				"          Pid = AMES@Pid,",
+				"          RoofStyle,",
+				"          RoofMatl,",
+				"          Exterior1st,",
+				"          Exterior2nd,",
+				"          MasVnrType,",
+				"          MasVnrArea,",
+				"          Foundation,",
+				"          Heating,",
+				"          CentralAir = {Central Air},",
+				"          lectrical,",
+				"          {1stFlrSF},",
+				"          {2ndFlrSF},",
+				"          LowQualFinSF,",
+				"          KitchenAbvGr = {Kitchen AbvGr},",
+				"          TotRmsAbvGrd,",
+				"          Functional,",
+				"          Fireplaces,",
+				"          FireplaceQu,",
+				"          PavedDrive,",
+				"          WoodDeckSF,",
+				"          OpenPorchSF,",
+				"          EnclosedPorch,",
+				"          {3SsnPorch},",
+				"          ScreenPorch,",
+				"          Fence,",
+				"          MSSubClass,",
+				"          PID,",
+				"          GrLivArea,",
+				"          ExterQual = ExterQual_txt",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select2",
+				"select2, TYPEQ lookup(ExterCond == Id,",
+				"     multiple: false,",
+				"     pickup: 'any',",
+				"     broadcast: 'auto')~> lookup2",
+				"lookup2 derive(ExterCond_txt = toString(Code)) ~> derivedColumn9",
+				"derivedColumn9 select(mapColumn(",
+				"          HeatingQC,",
+				"          KitchenQual,",
+				"          MSZoning,",
+				"          Pid = select2@Pid,",
+				"          RoofStyle,",
+				"          RoofMatl,",
+				"          Exterior1st,",
+				"          Exterior2nd,",
+				"          MasVnrType,",
+				"          MasVnrArea,",
+				"          Foundation,",
+				"          Heating,",
+				"          CentralAir,",
+				"          lectrical,",
+				"          {1stFlrSF},",
+				"          {2ndFlrSF},",
+				"          LowQualFinSF,",
+				"          KitchenAbvGr,",
+				"          TotRmsAbvGrd,",
+				"          Functional,",
+				"          Fireplaces,",
+				"          FireplaceQu,",
+				"          PavedDrive,",
+				"          WoodDeckSF,",
+				"          OpenPorchSF,",
+				"          EnclosedPorch,",
+				"          {3SsnPorch},",
+				"          ScreenPorch,",
+				"          Fence,",
+				"          MSSubClass,",
+				"          PID,",
+				"          GrLivArea,",
+				"          ExterQual,",
+				"          ExterCond = ExterCond_txt",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select3",
+				"select3, TYPEQ lookup(HeatingQC == Id,",
+				"     multiple: false,",
+				"     pickup: 'any',",
+				"     broadcast: 'auto')~> lookup3",
+				"lookup3 derive(HeatingQC_txt = toString(Code)) ~> derivedColumn10",
+				"derivedColumn10 select(mapColumn(",
+				"          KitchenQual,",
+				"          MSZoning,",
+				"          Pid = select3@Pid,",
+				"          RoofStyle,",
+				"          RoofMatl,",
+				"          Exterior1st,",
+				"          Exterior2nd,",
+				"          MasVnrType,",
+				"          MasVnrArea,",
+				"          Foundation,",
+				"          Heating,",
+				"          CentralAir,",
+				"          lectrical,",
+				"          {1stFlrSF},",
+				"          {2ndFlrSF},",
+				"          LowQualFinSF,",
+				"          KitchenAbvGr,",
+				"          TotRmsAbvGrd,",
+				"          Functional,",
+				"          Fireplaces,",
+				"          FireplaceQu,",
+				"          PavedDrive,",
+				"          WoodDeckSF,",
+				"          OpenPorchSF,",
+				"          EnclosedPorch,",
+				"          {3SsnPorch},",
+				"          ScreenPorch,",
+				"          Fence,",
+				"          MSSubClass,",
+				"          PID,",
+				"          GrLivArea,",
+				"          ExterQual,",
+				"          ExterCond,",
+				"          HeatingQC = HeatingQC_txt",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select4",
+				"select4, TYPEQ lookup(KitchenQual == Id,",
+				"     multiple: false,",
+				"     pickup: 'any',",
+				"     broadcast: 'auto')~> lookup4",
+				"lookup4 derive(KitchenQual_txt = toString(Code)) ~> derivedColumn11",
+				"derivedColumn11 select(mapColumn(",
+				"          MSZoning,",
+				"          Pid = select4@Pid,",
+				"          RoofStyle,",
+				"          RoofMatl,",
+				"          Exterior1st,",
+				"          Exterior2nd,",
+				"          MasVnrType,",
+				"          MasVnrArea,",
+				"          Foundation,",
+				"          Heating,",
+				"          CentralAir,",
+				"          lectrical,",
+				"          {1stFlrSF},",
+				"          {2ndFlrSF},",
+				"          LowQualFinSF,",
+				"          KitchenAbvGr,",
+				"          TotRmsAbvGrd,",
+				"          Functional,",
+				"          Fireplaces,",
+				"          FireplaceQu,",
+				"          PavedDrive,",
+				"          WoodDeckSF,",
+				"          OpenPorchSF,",
+				"          EnclosedPorch,",
+				"          {3SsnPorch},",
+				"          ScreenPorch,",
+				"          Fence,",
+				"          MSSubClass,",
+				"          PID,",
+				"          GrLivArea,",
+				"          ExterQual,",
+				"          ExterCond,",
+				"          HeatingQC,",
+				"          KitchenQual = KitchenQual_txt",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select5",
+				"select5, select6 lookup(MSZoning == Id,",
+				"     multiple: false,",
+				"     pickup: 'any',",
+				"     broadcast: 'auto')~> lookup5",
+				"lookup5 derive(MSZoning_txt = ZoneCode) ~> derivedColumn12",
+				"MSZONING select(mapColumn(",
+				"          Id,",
+				"          Description,",
+				"          ZoneCode = MSZoning",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select6",
+				"derivedColumn12 select(mapColumn(",
+				"          Pid = select5@Pid,",
+				"          RoofStyle,",
+				"          RoofMatl,",
+				"          Exterior1st,",
+				"          Exterior2nd,",
+				"          MasVnrType,",
+				"          MasVnrArea,",
+				"          Foundation,",
+				"          Heating,",
+				"          CentralAir,",
+				"          lectrical,",
+				"          {1stFlrSF},",
+				"          {2ndFlrSF},",
+				"          LowQualFinSF,",
+				"          KitchenAbvGr,",
+				"          TotRmsAbvGrd,",
+				"          Functional,",
+				"          Fireplaces,",
+				"          FireplaceQu,",
+				"          PavedDrive,",
+				"          WoodDeckSF,",
+				"          OpenPorchSF,",
+				"          EnclosedPorch,",
+				"          {3SsnPorch},",
+				"          ScreenPorch,",
+				"          Fence,",
+				"          MSSubClass,",
+				"          PID,",
+				"          GrLivArea,",
+				"          ExterQual,",
+				"          ExterCond,",
+				"          HeatingQC,",
+				"          KitchenQual,",
+				"          MSZoning = MSZoning_txt",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select7",
+				"SALE derive(PID = toString(toLong(PID)),",
+				"          MoSold = month(toDate({SaleDate}, 'yyyy-MM-dd')),",
+				"          YrSold = year(toDate({SaleDate}, 'yyyy-MM-dd'))) ~> derivedColumn14",
+				"MONGO, NEON join(ERROR_FUNCTION('') == ERROR_FUNCTION(''),",
+				"     joinType:'left',",
+				"     matchType:'exact',",
+				"     ignoreSpaces: false,",
+				"     broadcast: 'auto')~> join5",
+				"join5 join(derivedColumn5@PID == aggregate1@PID,",
+				"     joinType:'left',",
+				"     matchType:'exact',",
+				"     ignoreSpaces: false,",
+				"     broadcast: 'auto')~> join6",
+				"join6, derivedColumn14 join(derivedColumn5@PID == derivedColumn14@PID,",
+				"     joinType:'left',",
+				"     matchType:'exact',",
+				"     ignoreSpaces: false,",
+				"     broadcast: 'auto')~> join7",
+				"derivedColumn6 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> finale"
+			]
+		}
+	}
+}
