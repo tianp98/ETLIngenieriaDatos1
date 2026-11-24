@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "dataflow2_copy1",
+						"referenceName": "UNION_FINAL",
 						"type": "DataFlowReference"
 					},
 					"compute": {
