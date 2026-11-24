@@ -1,0 +1,238 @@
+{
+	"name": "dataflow2",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "GarageData",
+						"type": "DatasetReference"
+					},
+					"name": "GARAGE"
+				},
+				{
+					"dataset": {
+						"referenceName": "bsmtData",
+						"type": "DatasetReference"
+					},
+					"name": "BSMT"
+				},
+				{
+					"dataset": {
+						"referenceName": "PoolData",
+						"type": "DatasetReference"
+					},
+					"name": "POOL"
+				},
+				{
+					"dataset": {
+						"referenceName": "miscData",
+						"type": "DatasetReference"
+					},
+					"name": "MISC"
+				},
+				{
+					"dataset": {
+						"referenceName": "fromcsv",
+						"type": "DatasetReference"
+					},
+					"name": "BASE"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "demongo",
+						"type": "DatasetReference"
+					},
+					"name": "frommongo"
+				}
+			],
+			"transformations": [
+				{
+					"name": "derivedColumn1"
+				},
+				{
+					"name": "derivedColumn2"
+				},
+				{
+					"name": "derivedColumn3"
+				},
+				{
+					"name": "derivedColumn4"
+				},
+				{
+					"name": "join1"
+				},
+				{
+					"name": "derivedColumn5"
+				},
+				{
+					"name": "join2"
+				},
+				{
+					"name": "join3"
+				},
+				{
+					"name": "join4"
+				},
+				{
+					"name": "select1"
+				},
+				{
+					"name": "derivedColumn6"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          Order as short,",
+				"          PID as long,",
+				"          GarageType as string,",
+				"          GarageYrBlt as short,",
+				"          GarageFinish as string,",
+				"          GarageCars as short,",
+				"          GarageArea as short,",
+				"          GarageQual as string,",
+				"          GarageCond as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> GARAGE",
+				"source(output(",
+				"          PID as long,",
+				"          BsmtQual as string,",
+				"          BsmtCond as string,",
+				"          BsmtExposure as string,",
+				"          {BsmtFinType 1} as string,",
+				"          BsmtFinSF1 as short,",
+				"          BsmtFinType2 as string,",
+				"          BsmtFinSF2 as short,",
+				"          BsmtUnfSF as short,",
+				"          TotalBsmtSF as short,",
+				"          BsmtFullBath as short,",
+				"          BsmtHalfBath as short",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> BSMT",
+				"source(output(",
+				"          PID as long,",
+				"          PoolArea as short,",
+				"          PoolQC as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> POOL",
+				"source(output(",
+				"          PID as integer,",
+				"          MiscFeature as string,",
+				"          MiscVal as short",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> MISC",
+				"source(output(",
+				"          PID as integer,",
+				"          LotFrontage as double,",
+				"          LotArea as integer,",
+				"          Street as string,",
+				"          Alley as string,",
+				"          LotShape as string,",
+				"          LandContour as string,",
+				"          Utilities as string,",
+				"          LotConfig as string,",
+				"          LandSlope as string,",
+				"          Neighborhood as string,",
+				"          Condition1 as string,",
+				"          Condition2 as string,",
+				"          BldgType as string,",
+				"          HouseStyle as string,",
+				"          OverallQual as short,",
+				"          OverallCond as short,",
+				"          YearBuilt as short,",
+				"          {YearRemod/Add} as short",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> BASE",
+				"GARAGE derive(PID = toString(toLong(PID))) ~> derivedColumn1",
+				"BSMT derive(PID = toString(toLong(PID))) ~> derivedColumn2",
+				"POOL derive(PID = toString(toLong(PID))) ~> derivedColumn3",
+				"MISC derive(PID = toString(toLong(PID))) ~> derivedColumn4",
+				"derivedColumn5, derivedColumn1 join(derivedColumn5@PID == derivedColumn1@PID,",
+				"     joinType:'left',",
+				"     matchType:'exact',",
+				"     ignoreSpaces: false,",
+				"     broadcast: 'auto')~> join1",
+				"BASE derive(PID = toString(toLong(PID))) ~> derivedColumn5",
+				"join1, derivedColumn2 join(derivedColumn5@PID == derivedColumn2@PID,",
+				"     joinType:'left',",
+				"     matchType:'exact',",
+				"     ignoreSpaces: false,",
+				"     broadcast: 'auto')~> join2",
+				"join2, derivedColumn3 join(derivedColumn5@PID == derivedColumn3@PID,",
+				"     joinType:'left',",
+				"     matchType:'exact',",
+				"     ignoreSpaces: false,",
+				"     broadcast: 'auto')~> join3",
+				"join3, derivedColumn4 join(derivedColumn5@PID == derivedColumn4@PID,",
+				"     joinType:'left',",
+				"     matchType:'exact',",
+				"     ignoreSpaces: false,",
+				"     broadcast: 'auto')~> join4",
+				"join4 select(mapColumn(",
+				"          PID = derivedColumn5@PID,",
+				"          LotFrontage,",
+				"          LotArea,",
+				"          Street,",
+				"          Alley,",
+				"          LotShape,",
+				"          LandContour,",
+				"          Utilities,",
+				"          LotConfig,",
+				"          LandSlope,",
+				"          Neighborhood,",
+				"          Condition1,",
+				"          Condition2,",
+				"          BldgType,",
+				"          HouseStyle,",
+				"          OverallQual,",
+				"          OverallCond,",
+				"          YearBuilt,",
+				"          {YearRemod/Add},",
+				"          GarageType,",
+				"          GarageYrBlt,",
+				"          GarageFinish,",
+				"          GarageCars,",
+				"          GarageArea,",
+				"          GarageQual,",
+				"          GarageCond,",
+				"          BsmtQual,",
+				"          BsmtCond,",
+				"          BsmtExposure,",
+				"          {BsmtFinType 1},",
+				"          BsmtFinSF1,",
+				"          BsmtFinType2,",
+				"          BsmtFinSF2,",
+				"          BsmtUnfSF,",
+				"          TotalBsmtSF,",
+				"          BsmtFullBath,",
+				"          BsmtHalfBath,",
+				"          PoolArea,",
+				"          PoolQC,",
+				"          MiscFeature,",
+				"          MiscVal",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1",
+				"select1 derive(each(match(in(['GarageType','GarageFinish','GarageQual','GarageCond','BsmtQual','BsmtCond','BsmtExposure','BsmtFinType 1','BsmtFinType2','PoolQC','MiscFeature'], name)), $$ = iif(isNull($$) || trim(toString($$)) == '', 'NA', trim(toString($$)))),",
+				"          each(match(in(['GarageYrBlt','GarageCars','GarageArea','BsmtFinSF1','BsmtFinSF2','BsmtUnfSF','TotalBsmtSF','BsmtFullBath','BsmtHalfBath','PoolArea','MiscVal'], name)), $$ = iif(isNull($$) || trim(toString($$)) == '', '0', trim(toString($$))))) ~> derivedColumn6",
+				"derivedColumn6 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> frommongo"
+			]
+		}
+	}
+}

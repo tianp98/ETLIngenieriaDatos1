@@ -1,0 +1,23 @@
+{
+	"name": "demongo",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage_conn",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "clean",
+				"container": "sources"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
