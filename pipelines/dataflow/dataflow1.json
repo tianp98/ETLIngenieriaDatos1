@@ -15,7 +15,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "prueba2",
+						"referenceName": "fromcsv",
 						"type": "DatasetReference"
 					},
 					"name": "sink1"

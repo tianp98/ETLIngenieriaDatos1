@@ -42,7 +42,7 @@
 									"physicalType": "bigint"
 								},
 								"sink": {
-									"name": "MSZoning",
+									"name": "Id",
 									"physicalType": "String"
 								}
 							},
@@ -64,7 +64,7 @@
 									"physicalType": "character varying"
 								},
 								"sink": {
-									"name": "Id",
+									"name": "MSZoning",
 									"physicalType": "String"
 								}
 							}
