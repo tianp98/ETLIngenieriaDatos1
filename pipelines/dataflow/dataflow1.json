@@ -15,7 +15,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "pruebacsv",
+						"referenceName": "amesproperty_clean",
 						"type": "DatasetReference"
 					},
 					"name": "AmesPropertyPrep"
@@ -104,6 +104,27 @@
 				"select1 derive({YearRemod/Add} = iif(isNull({YearRemod/Add}) || trim(toString({YearRemod/Add})) == '', toInteger({YearBuilt}), toInteger({YearRemod/Add}))) ~> derivedColumn3",
 				"derivedColumn1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
+				"     input(",
+				"          PID as string,",
+				"          LotFrontage as string,",
+				"          LotArea as string,",
+				"          Street as string,",
+				"          Alley as string,",
+				"          LotShape as string,",
+				"          LandContour as string,",
+				"          Utilities as string,",
+				"          LotConfig as string,",
+				"          LandSlope as string,",
+				"          Neighborhood as string,",
+				"          Condition1 as string,",
+				"          Condition2 as string,",
+				"          BldgType as string,",
+				"          HouseStyle as string,",
+				"          OverallQual as string,",
+				"          OverallCond as string,",
+				"          YearBuilt as string,",
+				"          {YearRemod/Add} as string",
+				"     ),",
 				"     partitionFileNames:['amesproperty_clean.csv'],",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",

@@ -1,0 +1,101 @@
+{
+	"name": "amesproperty_clean",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage_conn",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "prueba.csv",
+				"folderPath": "Prueba",
+				"container": "sources"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "PID",
+				"type": "String"
+			},
+			{
+				"name": "LotFrontage",
+				"type": "String"
+			},
+			{
+				"name": "LotArea",
+				"type": "String"
+			},
+			{
+				"name": "Street",
+				"type": "String"
+			},
+			{
+				"name": "Alley",
+				"type": "String"
+			},
+			{
+				"name": "LotShape",
+				"type": "String"
+			},
+			{
+				"name": "LandContour",
+				"type": "String"
+			},
+			{
+				"name": "Utilities",
+				"type": "String"
+			},
+			{
+				"name": "LotConfig",
+				"type": "String"
+			},
+			{
+				"name": "LandSlope",
+				"type": "String"
+			},
+			{
+				"name": "Neighborhood",
+				"type": "String"
+			},
+			{
+				"name": "Condition1",
+				"type": "String"
+			},
+			{
+				"name": "Condition2",
+				"type": "String"
+			},
+			{
+				"name": "BldgType",
+				"type": "String"
+			},
+			{
+				"name": "HouseStyle",
+				"type": "String"
+			},
+			{
+				"name": "OverallQual",
+				"type": "String"
+			},
+			{
+				"name": "OverallCond",
+				"type": "String"
+			},
+			{
+				"name": "YearBuilt",
+				"type": "String"
+			},
+			{
+				"name": "YearRemod/Add",
+				"type": "String"
+			}
+		]
+	}
+}
