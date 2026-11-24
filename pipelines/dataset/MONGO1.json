@@ -1,0 +1,24 @@
+{
+	"name": "MONGO1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage_conn",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "MONGO1.csv",
+				"folderPath": "clean",
+				"container": "sources"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
