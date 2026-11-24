@@ -15,7 +15,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "AmesPropertyParquet",
+						"referenceName": "pruebacsv",
 						"type": "DatasetReference"
 					},
 					"name": "AmesPropertyPrep"
@@ -67,9 +67,9 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> AMESPROPERTY",
-				"derivedColumn3 derive(each(match(type == 'string'), $$ = iif(isNull($$) || trim($$) == '', 'NA', $$)),",
-				"          each(match(type == 'integer' || type == 'long' || type == 'short'), $$ = iifNull($$, 0)),",
-				"          each(match(type == 'double' || type == 'float' || type == 'decimal'), $$ = iifNull($$, 0.0))) ~> derivedColumn1",
+				"derivedColumn3 derive(each(match(type=='string'), $$ = iif(isNull($$) || trim($$) == '', 'NA', $$)),",
+				"          each(match(type=='integer'||type=='long'||type=='short'), $$ = iifNull($$, 0)),",
+				"          each(match(type=='double'||type=='float'||type=='decimal'), $$ = iifNull($$, 0.0))) ~> derivedColumn1",
 				"AMESPROPERTY aggregate(groupBy(Neighborhood),",
 				"     LF_med = avg(LotFrontage)) ~> aggregate1",
 				"AMESPROPERTY, aggregate1 join(AMESPROPERTY@Neighborhood == aggregate1@Neighborhood,",
@@ -104,11 +104,32 @@
 				"select1 derive({YearRemod/Add} = iif(isNull({YearRemod/Add}) || trim(toString({YearRemod/Add})) == '', toInteger({YearBuilt}), toInteger({YearRemod/Add}))) ~> derivedColumn3",
 				"derivedColumn1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     format: 'parquet',",
+				"     input(",
+				"          PID as string,",
+				"          LotFrontage as string,",
+				"          LotArea as string,",
+				"          Street as string,",
+				"          Alley as string,",
+				"          LotShape as string,",
+				"          LandContour as string,",
+				"          Utilities as string,",
+				"          LotConfig as string,",
+				"          LandSlope as string,",
+				"          Neighborhood as string,",
+				"          Condition1 as string,",
+				"          Condition2 as string,",
+				"          BldgType as string,",
+				"          HouseStyle as string,",
+				"          OverallQual as string,",
+				"          OverallCond as string,",
+				"          YearBuilt as string,",
+				"          {YearRemod/Add} as string",
+				"     ),",
 				"     partitionFileNames:['amesproperty_clean.parquet'],",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     partitionBy('hash', 1)) ~> AmesPropertyPrep"
+				"     partitionBy('hash', 1),",
+				"     format: 'parquet') ~> AmesPropertyPrep"
 			]
 		}
 	}
