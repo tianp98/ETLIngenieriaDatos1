@@ -210,7 +210,7 @@
 				"          MasVnrArea,",
 				"          Foundation,",
 				"          Heating,",
-				"          CentralAir = AMES@{Central Air},",
+				"          CentralAir = {Central Air},",
 				"          lectrical,",
 				"          {1stFlrSF},",
 				"          {2ndFlrSF},",
